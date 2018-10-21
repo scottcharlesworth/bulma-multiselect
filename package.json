@@ -4,6 +4,8 @@
   "homepage": "https://github.com/scottcharlesworth/bulma-multiselect#readme",
   "description": "Bulma styling for Vue-Multiselect",
   "main": "bulma-multiselect.sass",
+  "unpkg": "css/bulma-multiselect.css",
+  "style": "bulma/css/bulma-multiselect.min.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scottcharlesworth/bulma-multiselect.git"
