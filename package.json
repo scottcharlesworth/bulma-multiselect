@@ -24,7 +24,7 @@
     "url": "https://github.com/scottcharlesworth/bulma-multiselect/issues"
   },
   "files": [
-    "../BU2/sass",
+    "sass",
     "bulma-multiselect.sass",
     "LICENSE",
     "README.md"
