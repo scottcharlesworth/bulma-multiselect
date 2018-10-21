@@ -1,0 +1,421 @@
+$multiselect-active-border-color: $input-focus-border-color !default
+$multiselect-active-box-shadow-color: $input-focus-box-shadow-color !default
+$multiselect-active-box-shadow-size: $input-focus-box-shadow-size !default
+$multiselect-active-z: $dropdown-content-z !default
+$multiselect-background-color: $dropdown-content-background-color !default
+$multiselect-border-color: $input-border-color !default
+$multiselect-border-width: $control-border-width !default
+$multiselect-color: $input-color !default
+$multiselect-content-background-color: $dropdown-content-background-color !default
+$multiselect-content-offset: $dropdown-content-offset !default
+$multiselect-content-radius: $dropdown-content-radius !default
+$multiselect-content-shadow: $dropdown-content-shadow !default
+$multiselect-height: $input-height !default
+$multiselect-hover-border-color: $input-hover-border-color !default
+$multiselect-hover-color: $input-hover-color !default
+$multiselect-line-height: $control-line-height !default
+$multiselect-padding-horizontal: $button-padding-horizontal !default
+$multiselect-padding-right: 2.5em !default
+$multiselect-padding-vertical: $button-padding-vertical !default
+$multiselect-radius: $control-radius !default
+$multiselect-select-arrow-color: $input-arrow !default
+$multiselect-size-large: $size-large !default
+$multiselect-size-medium: $size-medium !default
+$multiselect-size-small: $size-small !default
+$multiselect-spinner-color: $multiselect-select-arrow-color !default
+$multiselect-spinner-use-bulma: false !default
+
+fieldset[disabled] .multiselect
+  pointer-events: none
+
+.multiselect__loading-enter-active, .multiselect__loading-leave-active
+  transition: opacity .4s ease-in-out
+  opacity: 1
+
+.multiselect__loading-enter, .multiselect__loading-leave-active
+  opacity: 0
+
+.multiselect, .multiselect__input, .multiselect__single
+  font-family: inherit
+  font-size: 1em
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+
+.multiselect
+  display: inline-block
+  max-width: 100%
+  position: relative
+  vertical-align: top
+
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+  &:hover
+    .multiselect__tags
+      border-color: $multiselect-hover-border-color
+
+  &:hover, &.multiselect--active
+    .multiselect__select
+      &::before
+        border-color: $multiselect-hover-color
+
+.multiselect--disabled
+  opacity: 0.6
+
+.multiselect--active
+  z-index: $multiselect-active-z
+
+  .multiselect__select
+    transform: rotate(180deg)
+
+  .multiselect__tags, &:hover .multiselect__tags
+    border-color: $multiselect-active-border-color
+    box-shadow: $multiselect-active-box-shadow-size $multiselect-active-box-shadow-color
+
+.multiselect__input, .multiselect__single
+  position: relative
+  display: inline-block
+  min-height: $multiselect-line-height
+  line-height: $multiselect-line-height
+  border: none
+  border-radius: $multiselect-radius
+  background: $multiselect-background-color
+  padding: 0
+  width: 100%
+  transition: border .1s ease
+  box-sizing: border-box
+  vertical-align: top
+
+.multiselect__input
+  &:-ms-input-placeholder, &::placeholder
+    color: #35495e
+
+.multiselect__tag ~
+.multiselect__input, .multiselect__single
+  width: auto
+
+.multiselect__input:focus
+  outline: none
+
+.multiselect__single
+  &:focus
+    outline: none
+
+.multiselect__tags-wrap
+  display: inline
+
+.multiselect__tags
+  min-height: $multiselect-height
+  display: block
+  padding: $multiselect-padding-vertical $multiselect-padding-right $multiselect-padding-vertical $multiselect-padding-horizontal
+  border-radius: $multiselect-radius
+  border: $multiselect-border-width solid $multiselect-border-color
+  background: $multiselect-background-color
+  line-height: 1
+
+.multiselect__tag
+  position: relative
+  display: inline-block
+  padding: 2px 26px 4px 10px
+  border-radius: 5px
+  margin-right: 10px
+  color: #fff
+  line-height: 1
+  background: #41b883
+  white-space: nowrap
+  overflow: hidden
+  max-width: 100%
+  text-overflow: ellipsis
+
+.multiselect__tag-icon
+  cursor: pointer
+  margin-left: 7px
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+  font-weight: 700
+  font-style: normal
+  width: 22px
+  text-align: center
+  line-height: 16px
+  transition: all .2s ease
+  border-radius: 5px
+  &:after
+    content: "\D7"
+    color: #266d4d
+    font-size: 14px
+  &:focus, &:hover
+    background: #369a6e
+  &:focus:after, &:hover:after
+    color: #fff
+
+.multiselect__current
+  min-height: 40px
+  overflow: hidden
+  padding: 8px 30px 0 12px
+  white-space: nowrap
+  border-radius: 5px
+  border: 1px solid #e8e8e8
+  line-height: 16px
+  box-sizing: border-box
+  display: block
+  margin: 0
+  text-decoration: none
+  cursor: pointer
+
+.multiselect__select,
+.multiselect__spinner
+  position: absolute
+  width: 2.85em
+  height: calc(#{$multiselect-height} - #{$multiselect-border-width * 2})
+  right: 1px
+  top: 1px
+  border-radius: $multiselect-content-radius
+  display: block
+
+.multiselect__select
+  cursor: pointer
+  transition: transform 0.2s ease
+  &:before
+    border: 3px solid $multiselect-select-arrow-color
+    border-radius: 2px
+    border-right: 0
+    border-top: 0
+    content: " "
+    display: block
+    height: 0.625em
+    margin-top: -0.4375em
+    pointer-events: none
+    position: absolute
+    top: 1.15em
+    transform: rotate(-45deg)
+    transform-origin: center center
+    width: 0.625em
+    right: 1.125em
+
+.multiselect__spinner
+  background: $multiselect-background-color
+  @if $multiselect-spinner-use-bulma == true
+    &:after
+      @extend %loader
+      margin-top: 0
+      position: absolute
+      right: 0.625em
+      top: 0.55em
+      transform: none
+  @else
+    &:after
+      position: absolute
+      content: ""
+      top: 50%
+      left: 50%
+      margin: -8px 0 0 -8px
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      border: 2px solid transparent
+      border-top-color: $multiselect-spinner-color
+      box-shadow: 0 0 0 1px transparent
+    &:before
+      position: absolute
+      content: ""
+      top: 50%
+      left: 50%
+      margin: -8px 0 0 -8px
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      border: 2px solid transparent
+      border-top-color: $multiselect-spinner-color
+      box-shadow: 0 0 0 1px transparent
+      animation: a 2.4s cubic-bezier(0.41, 0.26, 0.2, 0.62)
+      animation-iteration-count: infinite
+    &:after
+      animation: a 2.4s cubic-bezier(0.51, 0.09, 0.21, 0.8)
+      animation-iteration-count: infinite
+
+.multiselect__placeholder
+  color: $multiselect-color
+  display: inline-block
+  line-height: $multiselect-line-height
+
+
+.multiselect--active .multiselect__placeholder
+  display: none
+
+.multiselect__content-wrapper
+  position: absolute
+  display: block
+  background: $multiselect-content-background-color
+  width: 100%
+  max-height: 240px
+  overflow: auto
+  box-shadow: $multiselect-content-shadow
+  margin-top: $multiselect-content-offset
+  border-radius: $multiselect-content-radius
+  z-index: $multiselect-active-z
+  -webkit-overflow-scrolling: touch
+
+.multiselect__content
+  list-style: none
+  display: inline-block
+  padding: 0
+  margin: 0
+  min-width: 100%
+  vertical-align: top
+
+.multiselect--above .multiselect__content-wrapper
+  bottom: 100%
+  margin-bottom: $multiselect-content-offset
+
+.multiselect__content::webkit-scrollbar
+  display: none
+
+.multiselect__element
+  display: block
+
+.multiselect__option
+  display: block
+  padding: 12px
+  min-height: 40px
+  line-height: 16px
+  text-decoration: none
+  text-transform: none
+  vertical-align: middle
+  position: relative
+  cursor: pointer
+  white-space: nowrap
+  &:after
+    top: 0
+    right: 0
+    position: absolute
+    line-height: 40px
+    padding-right: 12px
+    padding-left: 20px
+    font-size: 1em
+
+.multiselect__option--highlight
+  background: #41b883
+  outline: none
+  color: #fff
+  &:after
+    content: attr(data-select)
+    background: #41b883
+    color: #fff
+
+.multiselect__option--selected
+  background: #f3f3f3
+  color: #35495e
+  font-weight: 700
+  &:after
+    content: attr(data-selected)
+    color: silver
+  &.multiselect__option--highlight
+    background: #ff6a6a
+    color: #fff
+    &:after
+      background: #ff6a6a
+      content: attr(data-deselect)
+      color: #fff
+
+.multiselect--disabled
+  background: #ededed
+  pointer-events: none
+  .multiselect__current, .multiselect__select
+    background: #ededed
+    color: #a6a6a6
+
+.multiselect__option--disabled
+  background: #ededed !important
+  color: #a6a6a6 !important
+  cursor: text
+  pointer-events: none
+
+.multiselect__option--group
+  background: #ededed
+  color: #35495e
+  &.multiselect__option--highlight
+    background: #35495e
+    color: #fff
+    &:after
+      background: #35495e
+
+.multiselect__option--disabled.multiselect__option--highlight
+  background: #dedede
+
+.multiselect__option--group-selected.multiselect__option--highlight
+  background: #ff6a6a
+  color: #fff
+  &:after
+    background: #ff6a6a
+    content: attr(data-deselect)
+    color: #fff
+
+.multiselect-enter-active, .multiselect-leave-active
+  transition: all 0.15s ease
+
+.multiselect-enter, .multiselect-leave-active
+  opacity: 0
+
+.multiselect__strong
+  margin-bottom: 8px
+  line-height: 20px
+  display: inline-block
+  vertical-align: top
+
+[dir=rtl]
+  .multiselect
+    text-align: right
+  .multiselect__select
+    right: auto
+    left: 1px
+  .multiselect__tags
+    padding: 8px 8px 0 40px
+  .multiselect__content
+    text-align: right
+  .multiselect__option:after
+    right: auto
+    left: 0
+  .multiselect__clear
+    right: auto
+    left: 12px
+  .multiselect__spinner
+    right: auto
+    left: 1px
+
+@keyframes a
+  0%
+    transform: rotate(0)
+
+  to
+    transform: rotate(2turn)
+
+// Bulma CSS
+.multiselect
+  &.is-fullwidth
+    width: 100%
+  &.is-small
+    font-size: $multiselect-size-small
+  &.is-medium
+    font-size: $multiselect-size-medium
+  &.is-large
+    font-size: $multiselect-size-large
+
+@each $name, $pair in $colors
+  $color: nth($pair, 1)
+  &.is-#{$name}
+    .multiselect__select:before
+      border-color: $color
+
+    .multiselect__tags, &:hover .multiselect__tags
+      border-color: $color
+
+    &.multiselect--active
+      .multiselect__tags, &:hover .multiselect__tags
+        border-color: darken($color, 5%)
+        box-shadow: $multiselect-active-box-shadow-size rgba($color, 0.25)

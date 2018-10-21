@@ -1,0 +1,32 @@
+{
+  "name": "bulma-multiselect",
+  "version": "0.0.1",
+  "homepage": "https://github.com/scottcharlesworth/bulma-multiselect#readme",
+  "description": "Bulma styling for Vue-Multiselect",
+  "main": "bulma-multiselect.sass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottcharlesworth/bulma-multiselect.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "bulma",
+    "vue",
+    "vue-multiselect",
+    "multiselect"
+  ],
+  "author": {
+    "name": "Scott Charlesworth"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottcharlesworth/bulma-multiselect/issues"
+  },
+  "files": [
+    "../BU2/sass",
+    "bulma-multiselect.sass",
+    "LICENSE",
+    "README.md"
+  ]
+}
