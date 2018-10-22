@@ -14,6 +14,10 @@ $multiselect-height: $input-height !default
 $multiselect-hover-border-color: $input-hover-border-color !default
 $multiselect-hover-color: $input-hover-color !default
 $multiselect-line-height: $control-line-height !default
+$multiselect-option-highlighted-background-color: #41b883 !default
+$multiselect-option-highlighted-color: #fff !default
+$multiselect-option-remove-background-color: #ff6a6a !default
+$multiselect-option-remove-color: #fff !default
 $multiselect-option-selected-weight: $weight-semibold !default
 $multiselect-padding-horizontal: $button-padding-horizontal !default
 $multiselect-padding-right: 2.5em !default
@@ -25,6 +29,10 @@ $multiselect-size-medium: $size-medium !default
 $multiselect-size-small: $size-small !default
 $multiselect-spinner-color: $multiselect-select-arrow-color !default
 $multiselect-spinner-use-bulma: false !default
+$multiselect-tag-background-color: $multiselect-option-highlighted-background-color !default
+$multiselect-tag-color: $multiselect-option-highlighted-color !default
+$multiselect-tag-icon-color: #266d4d !default
+$multiselect-tag-icon-hover-background-color: #369a6e !default
 $multiselect-tag-icon-weight: $weight-bold !default
 
 fieldset[disabled] .multiselect
@@ -125,9 +133,9 @@ fieldset[disabled] .multiselect
   padding: 2px 26px 4px 10px
   border-radius: 5px
   margin-right: 10px
-  color: #fff
+  color: $multiselect-tag-color
   line-height: 1
-  background: #41b883
+  background: $multiselect-tag-background-color
   white-space: nowrap
   overflow: hidden
   max-width: 100%
@@ -149,10 +157,10 @@ fieldset[disabled] .multiselect
   border-radius: 5px
   &:after
     content: "\D7"
-    color: #266d4d
+    color: $multiselect-tag-icon-color
     font-size: 14px
   &:focus, &:hover
-    background: #369a6e
+    background: $multiselect-tag-icon-hover-background-color
   &:focus:after, &:hover:after
     color: #fff
 
@@ -301,13 +309,13 @@ fieldset[disabled] .multiselect
     font-size: 1em
 
 .multiselect__option--highlight
-  background: #41b883
+  background: $multiselect-option-highlighted-background-color
   outline: none
-  color: #fff
+  color: $multiselect-option-highlighted-color
   &:after
     content: attr(data-select)
-    background: #41b883
-    color: #fff
+    background: $multiselect-option-highlighted-background-color
+    color: $multiselect-option-highlighted-color
 
 .multiselect__option--selected
   background: #f3f3f3
@@ -317,12 +325,12 @@ fieldset[disabled] .multiselect
     content: attr(data-selected)
     color: silver
   &.multiselect__option--highlight
-    background: #ff6a6a
-    color: #fff
+    background: $multiselect-option-remove-background-color
+    color: $multiselect-option-remove-color
     &:after
-      background: #ff6a6a
+      background: $multiselect-option-remove-background-color
       content: attr(data-deselect)
-      color: #fff
+      color: $multiselect-option-remove-color
 
 .multiselect--disabled
   background: #ededed
@@ -350,12 +358,12 @@ fieldset[disabled] .multiselect
   background: #dedede
 
 .multiselect__option--group-selected.multiselect__option--highlight
-  background: #ff6a6a
-  color: #fff
+  background: $multiselect-option-remove-background-color
+  color: $multiselect-option-remove-color
   &:after
-    background: #ff6a6a
+    background: $multiselect-option-remove-background-color
     content: attr(data-deselect)
-    color: #fff
+    color: $multiselect-option-remove-color
 
 .multiselect-enter-active, .multiselect-leave-active
   transition: all 0.15s ease
