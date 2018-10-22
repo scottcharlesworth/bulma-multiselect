@@ -14,6 +14,8 @@ $multiselect-height: $input-height !default
 $multiselect-hover-border-color: $input-hover-border-color !default
 $multiselect-hover-color: $input-hover-color !default
 $multiselect-line-height: $control-line-height !default
+$multiselect-option-disabled-background-color: #ededed !default
+$multiselect-option-disabled-color: #a6a6a6 !default
 $multiselect-option-highlighted-background-color: #41b883 !default
 $multiselect-option-highlighted-color: #fff !default
 $multiselect-option-remove-background-color: #ff6a6a !default
@@ -344,11 +346,11 @@ fieldset[disabled] .multiselect
       color: $multiselect-option-remove-color
 
 .multiselect--disabled
-  background: #ededed
+  background: $multiselect-option-disabled-background-color
   pointer-events: none
   .multiselect__current, .multiselect__select
-    background: #ededed
-    color: #a6a6a6
+    background: $multiselect-option-disabled-background-color
+    color: $multiselect-option-disabled-color
 
 .multiselect__option--disabled
   background: #ededed !important
