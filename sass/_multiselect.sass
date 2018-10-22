@@ -10,6 +10,8 @@ $multiselect-content-background-color: $dropdown-content-background-color !defau
 $multiselect-content-offset: $dropdown-content-offset !default
 $multiselect-content-radius: $dropdown-content-radius !default
 $multiselect-content-shadow: $dropdown-content-shadow !default
+$multiselect-disabled-background-color: #ededed !default
+$multiselect-disabled-color: #a6a6a6 !default
 $multiselect-height: $input-height !default
 $multiselect-hover-border-color: $input-hover-border-color !default
 $multiselect-hover-color: $input-hover-color !default
@@ -346,15 +348,15 @@ fieldset[disabled] .multiselect
       color: $multiselect-option-remove-color
 
 .multiselect--disabled
-  background: $multiselect-option-disabled-background-color
+  background: $multiselect-disabled-background-color
   pointer-events: none
   .multiselect__current, .multiselect__select
-    background: $multiselect-option-disabled-background-color
-    color: $multiselect-option-disabled-color
+    background: $multiselect-disabled-background-color
+    color: $multiselect-disabled-color
 
 .multiselect__option--disabled
-  background: #ededed !important
-  color: #a6a6a6 !important
+  background: $multiselect-option-disabled-background-color !important
+  color: $multiselect-option-disabled-color !important
   cursor: text
   pointer-events: none
 
