@@ -372,9 +372,10 @@ fieldset[disabled] .multiselect
     text-align: right
   .multiselect__select
     right: auto
-    left: 1px
+    left: $multiselect-border-width
   .multiselect__tags
-    padding: 8px 8px 0 40px
+    padding: $multiselect-padding-vertical $multiselect-padding-horizontal $multiselect-padding-vertical $multiselect-padding-right
+    text-align: right
   .multiselect__content
     text-align: right
   .multiselect__option:after
@@ -385,7 +386,7 @@ fieldset[disabled] .multiselect
     left: 12px
   .multiselect__spinner
     right: auto
-    left: 1px
+    left: $multiselect-border-width
 
 @keyframes a
   0%
