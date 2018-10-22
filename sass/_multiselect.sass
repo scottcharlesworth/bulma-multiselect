@@ -25,6 +25,7 @@ $multiselect-size-medium: $size-medium !default
 $multiselect-size-small: $size-small !default
 $multiselect-spinner-color: $multiselect-select-arrow-color !default
 $multiselect-spinner-use-bulma: false !default
+$multiselect-tag-icon-weight: $weight-bold !default
 
 fieldset[disabled] .multiselect
   pointer-events: none
@@ -139,7 +140,7 @@ fieldset[disabled] .multiselect
   right: 0
   top: 0
   bottom: 0
-  font-weight: 700
+  font-weight: $multiselect-tag-icon-weight
   font-style: normal
   width: 22px
   text-align: center
