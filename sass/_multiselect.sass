@@ -22,6 +22,8 @@ $multiselect-option-highlighted-background-color: #41b883 !default
 $multiselect-option-highlighted-color: #fff !default
 $multiselect-option-remove-background-color: #ff6a6a !default
 $multiselect-option-remove-color: #fff !default
+$multiselect-option-selected-background-color: #f3f3f3 !default
+$multiselect-option-selected-color: #35495e !default
 $multiselect-option-selected-weight: $weight-semibold !default
 $multiselect-option-use-bulma-colors: true !default
 $multiselect-padding-horizontal: $button-padding-horizontal !default
@@ -333,12 +335,12 @@ fieldset[disabled] .multiselect
     color: $multiselect-option-highlighted-color
 
 .multiselect__option--selected
-  background: #f3f3f3
-  color: #35495e
+  background: $multiselect-option-selected-background-color
+  color: $multiselect-option-selected-color
   font-weight: $multiselect-option-selected-weight
   &:after
     content: attr(data-selected)
-    color: silver
+    color: $multiselect-option-selected-color
   &.multiselect__option--highlight
     background: $multiselect-option-remove-background-color
     color: $multiselect-option-remove-color
