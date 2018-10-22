@@ -14,6 +14,7 @@ $multiselect-height: $input-height !default
 $multiselect-hover-border-color: $input-hover-border-color !default
 $multiselect-hover-color: $input-hover-color !default
 $multiselect-line-height: $control-line-height !default
+$multiselect-option-selected-weight: $weight-semibold !default
 $multiselect-padding-horizontal: $button-padding-horizontal !default
 $multiselect-padding-right: 2.5em !default
 $multiselect-padding-vertical: $button-padding-vertical !default
@@ -310,7 +311,7 @@ fieldset[disabled] .multiselect
 .multiselect__option--selected
   background: #f3f3f3
   color: #35495e
-  font-weight: 700
+  font-weight: $multiselect-option-selected-weight
   &:after
     content: attr(data-selected)
     color: silver
