@@ -19,6 +19,7 @@ $multiselect-option-highlighted-color: #fff !default
 $multiselect-option-remove-background-color: #ff6a6a !default
 $multiselect-option-remove-color: #fff !default
 $multiselect-option-selected-weight: $weight-semibold !default
+$multiselect-option-use-bulma-colors: true !default
 $multiselect-padding-horizontal: $button-padding-horizontal !default
 $multiselect-padding-right: 2.5em !default
 $multiselect-padding-vertical: $button-padding-vertical !default
@@ -34,6 +35,16 @@ $multiselect-tag-color: $multiselect-option-highlighted-color !default
 $multiselect-tag-icon-color: #266d4d !default
 $multiselect-tag-icon-hover-background-color: #369a6e !default
 $multiselect-tag-icon-weight: $weight-bold !default
+
+@if $multiselect-option-use-bulma-colors == true
+  $multiselect-option-highlighted-background-color: $green
+  $multiselect-option-highlighted-color: $white
+  $multiselect-option-remove-background-color: $red
+  $multiselect-option-remove-color: $white
+  $multiselect-tag-background-color: $green
+  $multiselect-tag-color: $white
+  $multiselect-tag-icon-color: darken($green, 30%)
+  $multiselect-tag-icon-hover-background-color: darken($green, 10%)
 
 fieldset[disabled] .multiselect
   pointer-events: none
