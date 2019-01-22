@@ -449,16 +449,16 @@ fieldset[disabled] .multiselect
   &.is-large
     font-size: $multiselect-size-large
 
-@each $name, $pair in $colors
-  $color: nth($pair, 1)
-  &.is-#{$name}
-    .multiselect__select:before
-      border-color: $color
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    &.is-#{$name}
+      .multiselect__select:before
+        border-color: $color
 
-    .multiselect__tags, &:hover .multiselect__tags
-      border-color: $color
-
-    &.multiselect--active
       .multiselect__tags, &:hover .multiselect__tags
-        border-color: darken($color, 5%)
-        box-shadow: $multiselect-active-box-shadow-size rgba($color, 0.25)
+        border-color: $color
+
+      &.multiselect--active
+        .multiselect__tags, &:hover .multiselect__tags
+          border-color: darken($color, 5%)
+          box-shadow: $multiselect-active-box-shadow-size rgba($color, 0.25)
