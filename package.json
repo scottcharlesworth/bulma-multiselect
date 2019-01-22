@@ -1,6 +1,6 @@
 {
   "name": "bulma-multiselect",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/scottcharlesworth/bulma-multiselect#readme",
   "description": "Bulma styling for Vue-Multiselect",
   "main": "bulma-multiselect.sass",
