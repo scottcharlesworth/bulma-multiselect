@@ -5,7 +5,7 @@
   "description": "Bulma styling for Vue-Multiselect",
   "main": "bulma-multiselect.sass",
   "unpkg": "css/bulma-multiselect.css",
-  "style": "bulma/css/bulma-multiselect.min.css",
+  "style": "css/bulma-multiselect.min.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scottcharlesworth/bulma-multiselect.git"
@@ -45,6 +45,7 @@
     "start": "npm run build-sass -- --watch"
   },
   "files": [
+    "css",
     "sass",
     "bulma-multiselect.sass",
     "LICENSE",
