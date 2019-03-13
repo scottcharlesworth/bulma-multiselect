@@ -39,6 +39,10 @@ fieldset[disabled] .multiselect {
   border-color: #363636;
 }
 
+.multiselect:focus {
+  outline: unset;
+}
+
 .multiselect--disabled {
   opacity: 0.6;
 }
