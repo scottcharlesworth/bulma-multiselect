@@ -1,6 +1,8 @@
 # bulma-multiselect
 Bulma styling for Vue-Multiselect
 
+![Example of bulma-multiselect](https://raw.githubusercontent.com/scottcharlesworth/bulma-multiselect/master/screenshot.png)
+
 Usage
 ---
 
