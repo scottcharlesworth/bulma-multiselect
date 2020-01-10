@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
-    "bulma": "^0.7.2",
+    "bulma": "^0.8.0",
     "clean-css-cli": "^4.1.11",
     "css-selector-extract": "^4.0.0",
     "node-sass": "^4.8.3",
