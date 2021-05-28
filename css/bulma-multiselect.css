@@ -5,7 +5,6 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect__loading-enter-active,.multiselect__loading-leave-active {
-  -webkit-transition: opacity .4s ease-in-out;
   transition: opacity .4s ease-in-out;
   opacity: 1;
 }
@@ -71,7 +70,6 @@ fieldset[disabled] .multiselect {
   background: white;
   padding: 0;
   width: 100%;
-  -webkit-transition: border .1s ease;
   transition: border .1s ease;
   box-sizing: border-box;
   vertical-align: top;
@@ -138,7 +136,6 @@ fieldset[disabled] .multiselect {
   width: 22px;
   text-align: center;
   line-height: 16px;
-  -webkit-transition: all .2s ease;
   transition: all .2s ease;
   border-radius: 5px;
 }
@@ -184,7 +181,6 @@ fieldset[disabled] .multiselect {
 
 .multiselect__select {
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
@@ -402,7 +398,6 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect-enter-active,.multiselect-leave-active {
-  -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 
