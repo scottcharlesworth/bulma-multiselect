@@ -26,13 +26,14 @@
     "url": "https://github.com/scottcharlesworth/bulma-multiselect/issues"
   },
   "devDependencies": {
-    "autoprefixer": "^8.2.0",
-    "bulma": "^0.8.0",
-    "clean-css-cli": "^4.1.11",
+    "autoprefixer": "^10.4.2",
+    "bulma": "^0.9.3",
+    "clean-css-cli": "^5.5.2",
     "css-selector-extract": "^4.0.0",
-    "node-sass": "^4.8.3",
-    "postcss-cli": "^5.0.0",
-    "rimraf": "^2.6.2"
+    "node-sass": "^7.0.0",
+    "postcss": "^8.4.7",
+    "postcss-cli": "^9.1.0",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run extract-ms && npm run build-autoprefix && npm run build-cleancss",
@@ -50,5 +51,6 @@
     "bulma-multiselect.sass",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "packageManager": "yarn@3.2.0"
 }
