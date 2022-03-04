@@ -52,8 +52,7 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect--active .multiselect__select {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .multiselect--active .multiselect__tags,.multiselect--active:hover .multiselect__tags {
@@ -75,7 +74,7 @@ fieldset[disabled] .multiselect {
   vertical-align: top;
 }
 
-.multiselect__input:-ms-input-placeholder,.multiselect__input::-ms-input-placeholder {
+.multiselect__input:-ms-input-placeholder {
   color: #35495e;
 }
 
@@ -181,9 +180,7 @@ fieldset[disabled] .multiselect {
 
 .multiselect__select {
   cursor: pointer;
-  transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
 .multiselect__select:before {
@@ -198,10 +195,8 @@ fieldset[disabled] .multiselect {
   pointer-events: none;
   position: absolute;
   top: 50%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform: rotate(-45deg);
+  transform-origin: center center;
   width: 0.625em;
   right: 1.125em;
 }
